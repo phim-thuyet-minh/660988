@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ở đây có thuyết minh</title>
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+
+    <div id="video-container">
+      <video id="player" controls playsinline></video>
+    </div>
+    <div class="LoadingMovie" id="isLoad">🌼 Nhấn vào tập phim phía dưới để phát Video 🌼</div>
+    <div class="options">
+      <label class="switch">
+        <input type="checkbox" id="autoNext">
+        <span class="slider"></span>
+        <span class="label-text">Tự động chuyển tập</span>
+      </label>
+
+      <label class="switch">
+        <input type="checkbox" id="skipIntroOutro">
+        <span class="slider"></span>
+        <span class="label-text">Bỏ qua giới thiệu phim</span>
+      </label>
+    </div>
+    <div class="history-bar">
+      <h2>Lịch sử xem</h2>
+      <div class="history-container">
+        
+      </div>
+    </div>
+
+    <div class="MovieName">Hãy Để Tôi Tỏa Sáng</div>
+    <button data-src="https://vz-c6c78df1-386.b-cdn.net/f83a24ed-bf0f-40f2-bb1e-7d8bc946ccf2/playlist.m3u8" data-introFirst="101" data-introEnd="180" data-sub="Track/HayDeToiToaSang/Tap01.vtt" data-title="Hãy Để Tôi Tỏa Sáng - Tập 1">Tập 1</button>
+    <button data-src="https://vz-c6c78df1-386.b-cdn.net/8b39faf1-db5c-4b2e-ad49-31c3718fec1b/playlist.m3u8" data-introFirst="101" data-introEnd="180" data-sub="Track/HayDeToiToaSang/Tap02.vtt" data-title="Hãy Để Tôi Tỏa Sáng - Tập 2">Tập 2</button>
+    <button data-src="https://vz-c6c78df1-386.b-cdn.net/5074131e-6577-4957-a9a2-3db2b15e825f/playlist.m3u8" data-introFirst="101" data-introEnd="180" data-sub="Track/HayDeToiToaSang/Tap03.vtt" data-title="Hãy Để Tôi Tỏa Sáng - Tập 3">Tập 3</button>
+    <button data-src="https://vz-c6c78df1-386.b-cdn.net/de1826a5-3bd6-45e3-a56a-5940c3106115/playlist.m3u8" data-introFirst="101" data-introEnd="180" data-sub="Track/HayDeToiToaSang/Tap04.vtt" data-title="Hãy Để Tôi Tỏa Sáng - Tập 4">Tập 4</button>
+    <button data-src="https://vz-c6c78df1-386.b-cdn.net/e3cf0d46-c0b1-4b62-9e2e-a717039d795a/playlist.m3u8" data-introFirst="101" data-introEnd="180" data-sub="Track/HayDeToiToaSang/Tap05.vtt" data-title="Hãy Để Tôi Tỏa Sáng - Tập 5">Tập 5</button>
+    <button data-src="https://vz-c6c78df1-386.b-cdn.net/b926821e-d8df-4693-8003-0f8cd6cc5420/playlist.m3u8" data-introFirst="101" data-introEnd="180" data-sub="Track/HayDeToiToaSang/Tap06.vtt" data-title="Hãy Để Tôi Tỏa Sáng - Tập 6">Tập 6</button>
+    <button data-src="https://vz-c6c78df1-386.b-cdn.net/b5edc37a-9583-4085-9aa3-4041c11cef29/playlist.m3u8" data-introFirst="101" data-introEnd="180" data-sub="Track/HayDeToiToaSang/Tap07.vtt" data-title="Hãy Để Tôi Tỏa Sáng - Tập 7">Tập 7</button>
+    <button data-src="https://vz-c6c78df1-386.b-cdn.net/08117d63-5ca5-476d-8f7b-465999e442f4/playlist.m3u8" data-introFirst="101" data-introEnd="180" data-sub="Track/HayDeToiToaSang/Tap08.vtt" data-title="Hãy Để Tôi Tỏa Sáng - Tập 8">Tập 8</button>
+    <button data-src="https://vz-c6c78df1-386.b-cdn.net/e8a9588d-398a-415b-90e7-75c079892f88/playlist.m3u8" data-introFirst="101" data-introEnd="180" data-sub="Track/HayDeToiToaSang/Tap09.vtt" data-title="Hãy Để Tôi Tỏa Sáng - Tập 9">Tập 9</button>
+    <button data-src="https://vz-c6c78df1-386.b-cdn.net/78058d70-b867-4920-89f9-d3af3e6a9c33/playlist.m3u8" data-introFirst="101" data-introEnd="180" data-sub="Track/HayDeToiToaSang/Tap10.vtt" data-title="Hãy Để Tôi Tỏa Sáng - Tập 10">Tập 10</button>
+    <button data-src="https://vz-c6c78df1-386.b-cdn.net/9577e14c-dd18-4f78-96a7-bd6a1944c7b4/playlist.m3u8" data-introFirst="101" data-introEnd="180" data-sub="Track/HayDeToiToaSang/Tap11.vtt" data-title="Hãy Để Tôi Tỏa Sáng - Tập 11">Tập 11</button>
+    <button data-src="https://vz-c6c78df1-386.b-cdn.net/e85e2b22-4458-4625-9832-3145a463bb53/playlist.m3u8" data-introFirst="101" data-introEnd="180" data-sub="Track/HayDeToiToaSang/Tap12.vtt" data-title="Hãy Để Tôi Tỏa Sáng - Tập 12">Tập 12</button>
+    <button data-src="https://vz-c6c78df1-386.b-cdn.net/d89de951-519e-4209-a952-af53aecc1626/playlist.m3u8" data-introFirst="101" data-introEnd="180" data-sub="Track/HayDeToiToaSang/Tap13.vtt" data-title="Hãy Để Tôi Tỏa Sáng - Tập 13">Tập 13</button>
+    <button data-src="https://vz-c6c78df1-386.b-cdn.net/ea719889-69a3-4ac2-a82d-a7c0e7fb9094/playlist.m3u8" data-introFirst="101" data-introEnd="180" data-sub="Track/HayDeToiToaSang/Tap14.vtt" data-title="Hãy Để Tôi Tỏa Sáng - Tập 14">Tập 14</button>
+    <button data-src="https://vz-c6c78df1-386.b-cdn.net/ef8a1d5e-f022-4ec3-a6fa-9344120cdc01/playlist.m3u8" data-introFirst="101" data-introEnd="180" data-sub="Track/HayDeToiToaSang/Tap15.vtt" data-title="Hãy Để Tôi Tỏa Sáng - Tập 15">Tập 15</button>
+    <button data-src="https://vz-c6c78df1-386.b-cdn.net/ae429b54-87a1-4dd1-81c5-b784462c9846/playlist.m3u8" data-introFirst="101" data-introEnd="180" data-sub="Track/HayDeToiToaSang/Tap16.vtt" data-title="Hãy Để Tôi Tỏa Sáng - Tập 16">Tập 16</button>
+    <button data-src="https://vz-c6c78df1-386.b-cdn.net/a1479fa4-7f4f-4bc9-b648-3cf23ec78118/playlist.m3u8" data-introFirst="101" data-introEnd="180" data-sub="Track/HayDeToiToaSang/Tap17.vtt" data-title="Hãy Để Tôi Tỏa Sáng - Tập 17">Tập 17</button>
+    <button data-src="https://vz-c6c78df1-386.b-cdn.net/5a9c1f35-a093-46fe-90c2-a7f76d1548d7/playlist.m3u8" data-introFirst="101" data-introEnd="180" data-sub="Track/HayDeToiToaSang/Tap18.vtt" data-title="Hãy Để Tôi Tỏa Sáng - Tập 18">Tập 18</button>
+    <button data-src="https://vz-c6c78df1-386.b-cdn.net/76042b81-be8c-4f2e-bd42-102945da0269/playlist.m3u8" data-introFirst="101" data-introEnd="180" data-sub="Track/HayDeToiToaSang/Tap19.vtt" data-title="Hãy Để Tôi Tỏa Sáng - Tập 19">Tập 19</button>
+    <button data-src="https://vz-c6c78df1-386.b-cdn.net/76200623-353a-4a7a-bb56-fb17957f5dfd/playlist.m3u8" data-introFirst="101" data-introEnd="180" data-sub="Track/HayDeToiToaSang/Tap20.vtt" data-title="Hãy Để Tôi Tỏa Sáng - Tập 20">Tập 20</button>
+    <button data-src="https://vz-c6c78df1-386.b-cdn.net/e928cc9d-42dc-428d-81e8-a53e72ce4481/playlist.m3u8" data-introFirst="101" data-introEnd="180" data-sub="Track/HayDeToiToaSang/Tap21.vtt" data-title="Hãy Để Tôi Tỏa Sáng - Tập 21">Tập 21</button>
+    <button data-src="https://vz-c6c78df1-386.b-cdn.net/1aef95a8-9e08-4d01-8557-62cced83d57e/playlist.m3u8" data-introFirst="101" data-introEnd="180" data-sub="Track/HayDeToiToaSang/Tap22.vtt" data-title="Hãy Để Tôi Tỏa Sáng - Tập 22">Tập 22</button>
+    <button data-src="" data-introFirst="101" data-introEnd="180" data-sub="Track/HayDeToiToaSang/Tap23.vtt" data-title="Hãy Để Tôi Tỏa Sáng - Tập 23">Tập 23</button>
+    <button data-src="" data-introFirst="101" data-introEnd="180" data-sub="Track/HayDeToiToaSang/Tap24.vtt" data-title="Hãy Để Tôi Tỏa Sáng - Tập 24">Tập 24</button>
+    <button data-src="" data-introFirst="101" data-introEnd="180" data-sub="Track/HayDeToiToaSang/Tap25.vtt" data-title="Hãy Để Tôi Tỏa Sáng - Tập 25">Tập 25</button>
+    <button data-src="" data-introFirst="101" data-introEnd="180" data-sub="Track/HayDeToiToaSang/Tap26.vtt" data-title="Hãy Để Tôi Tỏa Sáng - Tập 26">Tập 26</button>
+    <button data-src="" data-introFirst="101" data-introEnd="180" data-sub="Track/HayDeToiToaSang/Tap27.vtt" data-title="Hãy Để Tôi Tỏa Sáng - Tập 27">Tập 27</button>
+    <button data-src="" data-introFirst="101" data-introEnd="180" data-sub="Track/HayDeToiToaSang/Tap28.vtt" data-title="Hãy Để Tôi Tỏa Sáng - Tập 28">Tập 28</button>
+    <button data-src="" data-introFirst="101" data-introEnd="180" data-sub="Track/HayDeToiToaSang/Tap29.vtt" data-title="Hãy Để Tôi Tỏa Sáng - Tập 29">Tập 29</button>
+    <button data-src="" data-introFirst="101" data-introEnd="180" data-sub="Track/HayDeToiToaSang/Tap30.vtt" data-title="Hãy Để Tôi Tỏa Sáng - Tập 30">Tập 30</button>
+    <button data-src="" data-introFirst="101" data-introEnd="180" data-sub="Track/HayDeToiToaSang/Tap31.vtt" data-title="Hãy Để Tôi Tỏa Sáng - Tập 31">Tập 31</button>
+    <button data-src="" data-introFirst="101" data-introEnd="180" data-sub="Track/HayDeToiToaSang/Tap32.vtt" data-title="Hãy Để Tôi Tỏa Sáng - Tập 32">Tập 32</button>
+
+    
+
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
