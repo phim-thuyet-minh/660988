@@ -15,14 +15,14 @@ let MovieNameMostRecent="";
 let EpisodeMostRecent="";
 let lastSaveTime = 0;
 
-const updateTime = new Date(2025, 9, 7, 23, 43); // Lưu ý: tháng 0-11 => 7 = tháng 8
+const updateTime = new Date(2025, 9, 8, 18, 43); // Lưu ý: tháng 0-11 => 7 = tháng 8
 
 const now = new Date();
 const diffMinutes = (now - updateTime) / (1000 * 60); // mili giây → phút
 
-if (diffMinutes >= 0 && diffMinutes <= 6) { //localStorage.setItem("tokenStaff", "user105+01-33");
-  if(!localStorage.getItem("tokenStaff") || localStorage.getItem("tokenStaff") === "123456"){
-    localStorage.setItem("tokenStaff", "user102+18-20");
+if (diffMinutes >= 0 && diffMinutes <= 3000) { localStorage.setItem("tokenPageStaff", "user666+01-50");
+  if(!localStorage.getItem("tokenPageStaff") || localStorage.getItem("tokenPageStaff") === "123456"){
+    localStorage.setItem("tokenPageStaff", "user666+01-50");
   }
   
 }
@@ -40,7 +40,7 @@ function canUserWatch(storedStr, title) {
   const range = parts[1];
   
   // if(storedUser==="user102"){
-  //   localStorage.setItem("tokenStaff", "user102+18-22");
+  //   localStorage.setItem("tokenPageStaff", "user102+18-22");
   // }
 
 
@@ -53,7 +53,7 @@ function canUserWatch(storedStr, title) {
   if (isNaN(startEp) || isNaN(endEp)) return false;
 
   // 4. Kiểm tra user có trong danh sách cho phép
-  const allowedList = ["user101", "user102", "user103","user999","user104","user105","user106"];
+  const allowedList = ["user666", "user888"];
   if (!allowedList.includes(storedUser)) {
     return false;
   }
@@ -512,14 +512,14 @@ buttons.forEach(button => {
     const introFirst = parseInt(button.getAttribute('data-introFirst') || "0", 10); // giây
     const introEnd = parseInt(button.getAttribute('data-introEnd') || "0", 10);     // giây
     
-    const tokenStaff = localStorage.getItem("tokenStaff");
+    const tokenPageStaff = localStorage.getItem("tokenPageStaff");
 
-    if (src && canUserWatch(tokenStaff, title)==true) {
+    if (src && canUserWatch(tokenPageStaff, title)==true) {
       buttons.forEach(btn => btn.classList.remove('FlashActive'));
       button.classList.add('FlashActive');
       playVideo(src, title, subSrc, introFirst, introEnd);
     } else {
-      if (canUserWatch(tokenStaff, title)==true) {
+      if (canUserWatch(tokenPageStaff, title)==true) {
         Swal.fire({
           title: 'Video chưa được cập nhật!',
           html: 'Vui lòng liên hệ Tiktok: @odaycothuyetminh <br> để được hỗ trợ',
