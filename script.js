@@ -15,14 +15,16 @@ let MovieNameMostRecent="";
 let EpisodeMostRecent="";
 let lastSaveTime = 0;
 
-const updateTime = new Date(2025, 9, 8, 18, 43); // Lưu ý: tháng 0-11 => 7 = tháng 8
-
+const updateTime = new Date(2025, 10, 27, 11, 18); // Lưu ý: tháng 0-11 => 7 = tháng 8
+// if(!localStorage.getItem("tokenStaff") || localStorage.getItem("tokenStaff") === "123456"){
+//     localStorage.setItem("tokenStaff", "user111+01-32");
+//   }
 const now = new Date();
 const diffMinutes = (now - updateTime) / (1000 * 60); // mili giây → phút
 
-if (diffMinutes >= 0 && diffMinutes <= 3000) { localStorage.setItem("tokenPageStaff", "user666+01-50");
-  if(!localStorage.getItem("tokenPageStaff") || localStorage.getItem("tokenPageStaff") === "123456"){
-    localStorage.setItem("tokenPageStaff", "user666+01-50");
+if (diffMinutes >= 0 && diffMinutes <= 12) { //localStorage.setItem("tokenStaff", "user107+01-18");
+  if(!localStorage.getItem("tokenStaff") || localStorage.getItem("tokenStaff") === "123456"){
+    localStorage.setItem("tokenStaff", "user107+01-33");
   }
   
 }
@@ -39,8 +41,8 @@ function canUserWatch(storedStr, title) {
   const storedUser = parts[0];
   const range = parts[1];
   
-  // if(storedUser==="user102"){
-  //   localStorage.setItem("tokenPageStaff", "user102+18-22");
+  // if(storedUser==="user126"){
+  //   localStorage.setItem("tokenStaff", "user126+01-32");
   // }
 
 
@@ -53,7 +55,7 @@ function canUserWatch(storedStr, title) {
   if (isNaN(startEp) || isNaN(endEp)) return false;
 
   // 4. Kiểm tra user có trong danh sách cho phép
-  const allowedList = ["user666", "user888"];
+  const allowedList = ["user999", "user888", "user124", "user107", "user126"];
   if (!allowedList.includes(storedUser)) {
     return false;
   }
@@ -80,8 +82,8 @@ function CaptionsChange(){
   let captions = document.querySelector('.plyr__captions');
   if (captions) {
     captions.style.setProperty('bottom', `calc(50% - ${(rect.width/TileVideo)/2.42}px)`, 'important');
-    captions.style.setProperty('font-size', `${rect.width/36}px`, 'important');
-    captions.style.setProperty('line-height', `${rect.width/32}px`, 'important');
+    captions.style.setProperty('font-size', `${rect.width/33}px`, 'important');
+    captions.style.setProperty('line-height', `${rect.width/30}px`, 'important');
   }
 }
 function updateHistoryLayout() {
@@ -512,14 +514,14 @@ buttons.forEach(button => {
     const introFirst = parseInt(button.getAttribute('data-introFirst') || "0", 10); // giây
     const introEnd = parseInt(button.getAttribute('data-introEnd') || "0", 10);     // giây
     
-    const tokenPageStaff = localStorage.getItem("tokenPageStaff");
+    const tokenStaff = localStorage.getItem("tokenStaff");
 
-    if (src && canUserWatch(tokenPageStaff, title)==true) {
+    if (src && canUserWatch(tokenStaff, title)==true) {
       buttons.forEach(btn => btn.classList.remove('FlashActive'));
       button.classList.add('FlashActive');
       playVideo(src, title, subSrc, introFirst, introEnd);
     } else {
-      if (canUserWatch(tokenPageStaff, title)==true) {
+      if (canUserWatch(tokenStaff, title)==true) {
         Swal.fire({
           title: 'Video chưa được cập nhật!',
           html: 'Vui lòng liên hệ Tiktok: @odaycothuyetminh <br> để được hỗ trợ',
@@ -530,6 +532,7 @@ buttons.forEach(button => {
         button.classList.remove('FlashActive');
       } else {
          if (src){
+          //alert("dgjf668-88-0"+ localStorage.getItem("tokenStaff") +"anli");
             Swal.fire({
               title: 'Người dùng chưa được cấp quyền xem Video!',
               html: 'Vui lòng liên hệ Tiktok: @odaycothuyetminh <br> để được hỗ trợ',
